@@ -92,7 +92,7 @@
         O que mais dói não é o autismo em si. É o julgamento. É a solidão. É a guerra diária contra uma sociedade que não entende.
       </p>
       <div class="cta mt-10" data-aos="fade-up" data-aos-delay="200">
-        <a href="" class="btn-primary text-white font-semibold py-4 px-8 rounded-full inline-block text-lg shadow-lg">
+        <a href="#secondButton" class="btn-primary text-white font-semibold py-4 px-8 rounded-full inline-block text-lg shadow-lg">
           Quero meu lugar no Santuário
         </a>
       </div>
@@ -237,7 +237,7 @@
     <!-- CTA Section -->
     <section class="text-center my-20" data-aos="fade-up">
       <div class="mb-10">
-        <a href="https://pay.kirvano.com/dfc51481-b46e-4057-82fd-6141de2057a4" class="btn-primary text-white font-semibold py-4 px-8 rounded-full inline-block text-lg shadow-lg transform transition hover:scale-105">
+        <a id="secondButton" href="https://pay.kirvano.com/dfc51481-b46e-4057-82fd-6141de2057a4" class="btn-primary text-white font-semibold py-4 px-8 rounded-full inline-block text-lg shadow-lg transform transition hover:scale-105">
           Quero meu lugar no Santuário por R$97
         </a>
       </div>
@@ -292,3 +292,17 @@
   </footer>
 </body>
 </html>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+  </script>
+
+

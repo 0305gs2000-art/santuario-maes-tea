@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Café com teu Filho - O Santuário das Mães</title>
-
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  
   <!-- Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17589209416"></script>
   <script>
@@ -24,101 +30,265 @@
   </script>
 
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#fff; color:#333; }
-    header { background:#5E4B8B; color:#fff; padding:40px; text-align:center; }
-    header h1 { font-size:2.5em; margin-bottom:10px; }
-    header p { font-size:1.2em; max-width:700px; margin:0 auto; }
-
-    section { padding:60px 20px; max-width:1000px; margin:auto; }
-    h2 { font-size:2em; margin-bottom:20px; color:#5E4B8B; }
-    p { font-size:1.1em; line-height:1.6; margin-bottom:20px; }
-
-    .oferta { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:20px; }
-    .oferta img { width:100%; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
-
-    .cta { text-align:center; margin:40px 0; }
-    .cta a { background:#FF7B00; color:#fff; padding:20px 40px; font-size:1.3em; text-decoration:none; border-radius:12px; }
-    .cta a:hover { background:#e56e00; }
-
-    .garantia { background:#f9f9f9; border:2px solid #5E4B8B; padding:30px; border-radius:12px; text-align:center; margin-top:30px; }
-    .garantia h3 { font-size:1.5em; color:#5E4B8B; margin-bottom:15px; }
-
-    footer { background:#222; color:#ccc; text-align:center; padding:30px; font-size:0.9em; }
-    footer a { color:#ccc; margin:0 10px; text-decoration:none; }
-    footer a:hover { text-decoration:underline; }
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #faf7ff;
+      color: #4a4458;
+      line-height: 1.6;
+    }
+    
+    .product-card {
+      transition: all 0.3s ease;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(94, 75, 139, 0.1);
+    }
+    
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(94, 75, 139, 0.15);
+    }
+    
+    .product-image {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+    
+    .gradient-header {
+      background: linear-gradient(135deg, #5E4B8B 0%, #7B5D9E 100%);
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #FF7B00 0%, #FF9A3E 100%);
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 123, 0, 0.3);
+    }
+    
+    .guarantee-box {
+      border: 2px dashed #5E4B8B;
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(5px);
+    }
   </style>
 </head>
-<body>
+<body class="antialiased">
+  <script>AOS.init();</script>
+  <script>feather.replace();</script>
 
-<header>
-  <h1>“Minha imagem refletida no espelho revela uma mulher cansada.”</h1>
-  <p>O que mais dói não é o autismo em si. É o julgamento. É a solidão. É a guerra diária contra uma sociedade que não entende.</p>
-  <div class="cta">
-    <a href="LINK_DO_CHECKOUT">Quero meu lugar no Santuário por R$97</a>
-  </div>
-</header>
-
-<section>
-  <h2>Eu sei o que você já tentou...</h2>
-  <p>Você já buscou terapias caras, convênios que não entregam, grupos que prometiam apoio e só trouxeram frustração. 
-     Eu sei que você já gastou dinheiro, tempo e esperança em soluções que falharam.</p>
-  <p>O peso que você carrega não é apenas cuidar do seu filho, mas enfrentar o julgamento, os olhares de reprovação e a sobrecarga total de fazer tudo sozinha.</p>
-</section>
-
-<section>
-  <h2>Agora existe um Santuário</h2>
-  <p>O <strong>Café com teu Filho</strong> não é mais um método vazio. É um refúgio para mães como você. 
-     Aqui a promessa não é “controlar comportamento”, mas conquistar paz, inclusão e dias de menos crise e mais conexão.</p>
-</section>
-
-<section>
-  <h2>O que você vai receber</h2>
-  <div class="oferta">
-    <div>
-      <img src="cafe_com_teu_filho_ebook.png" alt="Ebook Café com teu Filho">
-      <p>📖 <strong>E-book Café com teu Filho</strong><br>
-      Os 7 hábitos que transformam o caos em conexão. Reduza crises e crie laços fortes mesmo nos dias mais difíceis.</p>
+  <!-- Header -->
+  <header class="gradient-header text-white py-16 px-4 md:px-8 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-3xl md:text-4xl font-bold mb-6 leading-tight" data-aos="fade-down">
+        "Minha imagem refletida no espelho revela uma mulher cansada."
+      </h1>
+      <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto" data-aos="fade-down" data-aos-delay="100">
+        O que mais dói não é o autismo em si. É o julgamento. É a solidão. É a guerra diária contra uma sociedade que não entende.
+      </p>
+      <div class="cta mt-10" data-aos="fade-up" data-aos-delay="200">
+        <a href="" class="btn-primary text-white font-semibold py-4 px-8 rounded-full inline-block text-lg shadow-lg">
+          Quero meu lugar no Santuário
+        </a>
+      </div>
     </div>
-    <div>
-      <img src="planner_semanal.png" alt="Planner semanal">
-      <p>📅 <strong>O Mapa da Paz Semanal</strong><br>
-      A ferramenta visual que destrói a ansiedade da imprevisibilidade e dá ao seu filho a segurança de saber o que vai acontecer.</p>
-    </div>
-    <div>
-      <img src="checklist_anti_crise.png" alt="Checklist Anti-Crise">
-      <p>✅ <strong>O Protocolo de Emergência Anti-Crise</strong><br>
-      Seu guia de 60 segundos para agir quando o caos explode, transformando você na âncora de calma que seu filho precisa.</p>
-    </div>
-    <div>
-      <img src="comunicacao_calma.jpg" alt="Cartões de Comunicação Calma">
-      <p>🕊️ <strong>O Arsenal da Comunicação Calma</strong><br>
-      As frases exatas para desarmar crises antes de começarem, fazendo seu filho se sentir ouvido e compreendido.</p>
-    </div>
-    <div>
-      <img src="kit_emojis.png" alt="Meu Dia em Emojis">
-      <p>😀 <strong>Meu Dia em Emojis</strong><br>
-      A rotina lúdica que transforma tarefas simples em um jogo visual, reduzindo resistência e aumentando a cooperação.</p>
-    </div>
-  </div>
-</section>
+  </header>
 
-<section class="cta">
-  <a href="LINK_DO_CHECKOUT">Quero meu lugar no Santuário por R$97</a>
-  <div class="garantia">
-    <h3>Nossa Garantia Incondicional de 30 Dias</h3>
-    <p><strong>Ou Você Conquista a Paz ou Nós Devolvemos Seu Dinheiro.</strong></p>
-    <p>Eu coloco todo o risco sobre os meus ombros. Adquira o acesso ao Santuário hoje. 
-    Mergulhe no material, aplique as ferramentas por 30 dias completos.</p>
-    <p>Se ao final desse período você não sentir uma mudança real na atmosfera da sua casa — se as manhãs não estiverem mais calmas e a conexão com seu filho não estiver mais forte — 
-    basta me enviar um único e-mail. Eu devolverei 100% do seu investimento, sem perguntas, sem burocracia.</p>
-    <p>O único risco é continuar na solidão e no caos de hoje.</p>
-  </div>
-</section>
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 md:px-8 py-12">
+    <!-- Section 1 -->
+    <section class="mb-20" data-aos="fade-up">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-purple-800 mb-6">Eu sei o que você já tentou...</h2>
+        <div class="max-w-3xl mx-auto">
+          <p class="text-lg mb-6">
+            Você já buscou terapias caras, convênios que não entregam, grupos que prometiam apoio e só trouxeram frustração. 
+          </p>
+          <p class="text-lg">
+            Eu sei que você já gastou dinheiro, tempo e esperança em soluções que falharam.
+          </p>
+        </div>
+      </div>
+      
+      <div class="bg-purple-50 rounded-2xl p-8 md:p-10 max-w-4xl mx-auto">
+        <div class="flex items-center">
+          <div class="hidden md:block mr-6">
+            <i data-feather="heart" class="w-12 h-12 text-purple-600"></i>
+          </div>
+          <p class="text-lg md:text-xl italic text-purple-800">
+            "O peso que você carrega não é apenas cuidar do seu filho, mas enfrentar o julgamento, os olhares de reprovação e a sobrecarga total de fazer tudo sozinha."
+          </p>
+        </div>
+      </div>
+    </section>
 
-<footer>
-  <p>© 2025 Café com teu Filho. Todos os direitos reservados.</p>
-  <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
-</footer>
+    <!-- Section 2 -->
+    <section class="mb-20" data-aos="fade-up">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-purple-800 mb-6">Agora existe um Santuário</h2>
+        <div class="max-w-3xl mx-auto">
+          <p class="text-lg">
+            O <span class="font-bold text-purple-700">Café com teu Filho</span> não é mais um método vazio. É um refúgio para mães como você. 
+            Aqui a promessa não é "controlar comportamento", mas conquistar paz, inclusão e dias de menos crise e mais conexão.
+          </p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Products Section -->
+    <section class="mb-20" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-purple-800 mb-12 text-center">O que você vai receber</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Product 1 -->
+        <div class="product-card bg-white" data-aos="zoom-in" data-aos-delay="100">
+          <img src="cafe_com_teu_filho_ebook.png" alt="Ebook Café com teu Filho" class="product-image">
+          <div class="p-6">
+            <div class="flex items-center mb-3">
+              <i data-feather="book" class="w-6 h-6 text-purple-600 mr-2"></i>
+              <h3 class="text-xl font-semibold text-purple-800">E-book Café com teu Filho</h3>
+            </div>
+            <p class="text-gray-600">
+              Os 7 hábitos que transformam o caos em conexão. Reduza crises e crie laços fortes mesmo nos dias mais difíceis.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card bg-white" data-aos="zoom-in" data-aos-delay="200">
+          <img src="planner_semanal.png" alt="Planner semanal" class="product-image">
+          <div class="p-6">
+            <div class="flex items-center mb-3">
+              <i data-feather="calendar" class="w-6 h-6 text-purple-600 mr-2"></i>
+              <h3 class="text-xl font-semibold text-purple-800">O Mapa da Paz Semanal</h3>
+            </div>
+            <p class="text-gray-600">
+              A ferramenta visual que destrói a ansiedade da imprevisibilidade e dá ao seu filho a segurança de saber o que vai acontecer.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card bg-white" data-aos="zoom-in" data-aos-delay="300">
+          <img src="checklist_anti_crise.png" alt="Checklist Anti-Crise" class="product-image">
+          <div class="p-6">
+            <div class="flex items-center mb-3">
+              <i data-feather="check-circle" class="w-6 h-6 text-purple-600 mr-2"></i>
+              <h3 class="text-xl font-semibold text-purple-800">O Protocolo de Emergência Anti-Crise</h3>
+            </div>
+            <p class="text-gray-600">
+              Seu guia de 60 segundos para agir quando o caos explode, transformando você na âncora de calma que seu filho precisa.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="product-card bg-white" data-aos="zoom-in" data-aos-delay="400">
+          <img src="comunicacao_calma.jpg" alt="Cartões de Comunicação Calma" class="product-image">
+          <div class="p-6">
+            <div class="flex items-center mb-3">
+              <i data-feather="message-square" class="w-6 h-6 text-purple-600 mr-2"></i>
+              <h3 class="text-xl font-semibold text-purple-800">O Arsenal da Comunicação Calma</h3>
+            </div>
+            <p class="text-gray-600">
+              As frases exatas para desarmar crises antes de começarem, fazendo seu filho se sentir ouvido e compreendido.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Product 5 -->
+        <div class="product-card bg-white" data-aos="zoom-in" data-aos-delay="500">
+          <img src="kit_emojis.png" alt="Meu Dia em Emojis" class="product-image">
+          <div class="p-6">
+            <div class="flex items-center mb-3">
+              <i data-feather="smile" class="w-6 h-6 text-purple-600 mr-2"></i>
+              <h3 class="text-xl font-semibold text-purple-800">Meu Dia em Emojis</h3>
+            </div>
+            <p class="text-gray-600">
+              A rotina lúdica que transforma tarefas simples em um jogo visual, reduzindo resistência e aumentando a cooperação.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Bonus Product -->
+        <div class="product-card bg-purple-50 border-2 border-purple-200" data-aos="zoom-in" data-aos-delay="600">
+          <div class="p-6">
+            <div class="flex items-center mb-3">
+              <i data-feather="gift" class="w-6 h-6 text-purple-600 mr-2"></i>
+              <h3 class="text-xl font-semibold text-purple-800">Vai Continuar na Crise?</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Você pode fechar esta página e seguir enfrentando sozinha as mesmas batalhas, ou pode hoje dar o primeiro passo para transformar sua casa em um lugar de paz e conexão.
+            </p>
+            <div class="bg-purple-100 text-purple-800 px-4 py-2 rounded-lg">
+              <i data-feather="clock" class="w-4 h-4 inline mr-1"></i>
+              <span class="text-sm font-medium">Última chance de sair da solidão</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="text-center my-20" data-aos="fade-up">
+      <div class="mb-10">
+        <a href="https://pay.kirvano.com/dfc51481-b46e-4057-82fd-6141de2057a4" class="btn-primary text-white font-semibold py-4 px-8 rounded-full inline-block text-lg shadow-lg transform transition hover:scale-105">
+          Quero meu lugar no Santuário por R$97
+        </a>
+      </div>
+      
+      <div class="guarantee-box rounded-2xl p-6 md:p-8 max-w-4xl mx-auto" data-aos="zoom-in">
+        <div class="flex flex-col items-center">
+          <div class="bg-purple-100 p-3 rounded-full mb-4">
+            <i data-feather="shield" class="w-8 h-8 text-purple-600"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-purple-800 mb-4">Nossa Garantia Incondicional de 30 Dias</h3>
+          <p class="text-lg font-semibold text-purple-700 mb-4">
+            Ou Você Conquista a Paz ou Nós Devolvemos Seu Dinheiro.
+          </p>
+          <div class="text-left space-y-4">
+            <p class="text-gray-700">
+              Eu coloco todo o risco sobre os meus ombros. Adquira o acesso ao Santuário hoje. 
+              Mergulhe no material, aplique as ferramentas por 30 dias completos.
+            </p>
+            <p class="text-gray-700">
+              Se ao final desse período você não sentir uma mudança real na atmosfera da sua casa — se as manhãs não estiverem mais calmas e a conexão com seu filho não estiver mais forte — 
+              basta me enviar um único e-mail. Eu devolverei 100% do seu investimento, sem perguntas, sem burocracia.
+            </p>
+            <p class="text-gray-700 font-medium">
+              O único risco é continuar na solidão e no caos de hoje.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="mb-6">© 2025 Café com teu Filho. Todos os direitos reservados.</p>
+      <div class="flex justify-center space-x-6">
+        <a href="#" class="hover:text-white transition">Política de Privacidade</a>
+        <a href="#" class="hover:text-white transition">Termos de Uso</a>
+      </div>
+      <div class="mt-8 flex justify-center space-x-4">
+        <a href="#" class="text-gray-400 hover:text-white transition">
+          <i data-feather="facebook" class="w-5 h-5"></i>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white transition">
+          <i data-feather="instagram" class="w-5 h-5"></i>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white transition">
+          <i data-feather="youtube" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

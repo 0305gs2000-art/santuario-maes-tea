@@ -1,20 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Café com teu Filho - O Santuário das Mães</title>
   <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-  <script src="https://unpkg.com/feather-icons"></script>
-  
-  <!-- Google Ads -->
+<!-- Google Ads -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17589209416"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer  [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-17589209416');
@@ -23,286 +14,683 @@
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LBVE57XBWV"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer  [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-LBVE57XBWV');
   </script>
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-    
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #faf7ff;
-      color: #4a4458;
-      line-height: 1.6;
-    }
-    
-    .product-card {
-      transition: all 0.3s ease;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(94, 75, 139, 0.1);
-    }
-    
-    .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(94, 75, 139, 0.15);
-    }
-    
-    .product-image {
-      height: 200px;
-      object-fit: cover;
-      width: 100%;
-    }
-    
-    .gradient-header {
-      background: linear-gradient(135deg, #5E4B8B 0%, #7B5D9E 100%);
-    }
-    
-    .btn-primary {
-      background: linear-gradient(135deg, #FF7B00 0%, #FF9A3E 100%);
-      transition: all 0.3s ease;
-    }
-    
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(255, 123, 0, 0.3);
-    }
-    
-    .guarantee-box {
-      border: 2px dashed #5E4B8B;
-      background-color: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(5px);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café com Teu Filho - Reduza crises em até 70%</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .main-content {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Header Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 18px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: #ff6b6b;
+            color: white;
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 107, 107, 0.6);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Product Image */
+        .product-image {
+            margin: 40px 0;
+        }
+
+        .product-image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .product-image img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 60px 40px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .content-section:last-child {
+            border-bottom: none;
+        }
+
+        .content-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #2d3748;
+            text-align: center;
+        }
+
+        .content-section h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #4a5568;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #4a5568;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            color: #2d3748;
+        }
+
+        .problem-highlight {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-left: 5px solid #e17055;
+        }
+
+        /* Solution Section */
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-card {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(116, 185, 255, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid #00b894;
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            font-size: 4rem;
+            color: #00b894;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-family: serif;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #4a5568;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+            color: white;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .pricing-card {
+            background: white;
+            color: #2d3748;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .pricing-card.featured {
+            border: 3px solid #ff6b6b;
+            transform: scale(1.05);
+        }
+
+        .pricing-card.featured::before {
+            content: 'MAIS POPULAR';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ff6b6b;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #ff6b6b;
+            margin: 20px 0;
+        }
+
+        .price-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .price-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e8f0;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .price-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #00b894;
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: #f8f9fa;
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background: #e9ecef;
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: #dee2e6;
+        }
+
+        .faq-answer {
+            padding: 20px;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Guarantee Section */
+        .guarantee-section {
+            background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .guarantee-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px auto;
+            max-width: 600px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content-section {
+                padding: 40px 20px;
+            }
+
+            .content-section h2 {
+                font-size: 2rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Floating elements */
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
 </head>
-<body class="antialiased">
-  <script>AOS.init();</script>
-  <script>feather.replace();</script>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content animate-fade-in">
+                    <h1>Café com Teu Filho</h1>
+                    <p class="subtitle"><strong>Reduza crises em até 70%</strong><br>
+                    7 hábitos práticos para transformar a rotina e criar calma — comece a ver diferença já na primeira semana.</p>
+                    
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x300/667eea/ffffff?text=Café+com+Teu+Filho" alt="Capa do produto" class="floating">
+                    </div>
 
-  <!-- Header -->
-  <header class="gradient-header text-white py-16 px-4 md:px-8 text-center">
-    <div class="max-w-4xl mx-auto">
-      <h1 class="text-3xl md:text-4xl font-bold mb-6 leading-tight" data-aos="fade-down">
-        "Minha imagem refletida no espelho revela uma mulher cansada."
-      </h1>
-      <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto" data-aos="fade-down" data-aos-delay="100">
-        O que mais dói não é o autismo em si. É o julgamento. É a solidão. É a guerra diária contra uma sociedade que não entende.
-      </p>
-      <div class="cta mt-10" data-aos="fade-up" data-aos-delay="200">
-        <a href="#secondButton" class="btn-primary text-white font-semibold py-4 px-8 rounded-full inline-block text-lg shadow-lg">
-          Quero meu lugar no Santuário
-        </a>
-      </div>
+                    <div class="cta-buttons">
+                        <a href="#oferta" class="btn btn-primary">Quero o Método — R$29,90</a>
+                        <a href="#oferta" class="btn btn-secondary">Sistema Completo — R$97</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Problem Section -->
+            <section class="content-section problem-section">
+                <h2>Você se reconhece aqui?</h2>
+                
+                <div class="problem-highlight">
+                    <p><strong>Vive em estado de alerta:</strong> pequenas tarefas viram batalhas, um evento inesperado desencadeia uma crise e você passa o dia inteiro apagando incêndios. O cansaço é físico e emocional. A culpa te corrói — você tem a sensação constante de que algo em você falhou como mãe.</p>
+                </div>
+
+                <div class="problem-highlight">
+                    <p><strong>Já tentou de tudo</strong> — terapias caras, conselhos bem-intencionados, rotinas complexas que não colaram. A frustração é a mesma: nada parece se adaptar à singularidade do seu filho.</p>
+                </div>
+
+                <div class="problem-highlight">
+                    <p><strong>Consequência:</strong> sem intervenção prática e rápida, os episódios de estresse se repetem, seu bem-estar colapsa e a relação com seu filho fica marcada por tensão em vez de afeto.</p>
+                </div>
+            </section>
+
+            <!-- Solution Section -->
+            <section class="content-section">
+                <h2>A solução: método objetivo + ferramentas práticas</h2>
+                
+                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px;"><strong>Café com Teu Filho</strong> não é teoria. É um sistema prático: um e-book com 7 hábitos testados e orientações acionáveis que transformam a rotina — acompanhado por ferramentas que tornam a aplicação simples, visível e sustentável.</p>
+
+                <div class="solution-grid">
+                    <div class="benefit-card">
+                        <h4>🎯 Redução de Crises</h4>
+                        <p>Estratégias para diminuir episódios ainda nas primeiras semanas. Você sabe exatamente o que fazer todos os dias.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h4>📅 Previsibilidade</h4>
+                        <p>Rotinas claras que reduzem ansiedade e comportamentos explosivos. Menos decisões no calor do momento.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h4>💝 Mais Conexão</h4>
+                        <p>Rituais diários que devolvem momentos de afeto e presença. Desarma conflitos imediatamente.</p>
+                    </div>
+                    
+                    <div class="benefit-card">
+                        <h4>🛠️ Ferramentas Prontas</h4>
+                        <p>Checklists e pictogramas para aplicar com rapidez. Criança entende rotina sem dependência verbal.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="content-section">
+                <h2>Resultados reais — mães que saíram do caos</h2>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial">
+                        <div class="testimonial-author">Mariana, 34 — Londrina</div>
+                        <div class="testimonial-text">Em 3 semanas minha casa mudou. Antes eu vivia no sufoco; hoje o pequeno já sabe quando vem a atividade e as crises quase sumiram. O Diário Anti-Crise salvou nossa noite.</div>
+                        <div style="margin-top: 10px; font-size: 0.9rem; color: #00b894; font-weight: 600;">— reduziu crises ~60% em 21 dias</div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-author">Ana, 40 — Salvador</div>
+                        <div class="testimonial-text">O Kit Emojis fez a diferença. Antes, explicações verbais não funcionavam. Depois de plastificar os cartões, a transição para a escola é outra história. Meu filho responde e eu fico menos ansiosa.</div>
+                        <div style="margin-top: 10px; font-size: 0.9rem; color: #00b894; font-weight: 600;">— prova de eficácia visual</div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="testimonial-author">Rita, 29 — São Paulo</div>
+                        <div class="testimonial-text">Já tinha tentado terapias caras. O método me deu passos claros que posso aplicar agora — sem esperar meses. É prático e humano.</div>
+                        <div style="margin-top: 10px; font-size: 0.9rem; color: #00b894; font-weight: 600;">— prova de posicionamento 'prático vs caro'</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Section -->
+            <section class="content-section pricing-section" id="oferta">
+                <h2>Oferta — escolha como quer começar</h2>
+                
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Método Essencial</h3>
+                        <div class="price">R$29,90</div>
+                        <p>O ponto de entrada — entenda os 7 hábitos e comece a transformar a rotina.</p>
+                        
+                        <ul class="price-list">
+                            <li>E-book: Café com Teu Filho — 7 hábitos</li>
+                            <li>Acesso imediato por download</li>
+                            <li>Garantia de 30 dias</li>
+                        </ul>
+                        
+                        <a href="#" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 20px;">Comprar Método — R$29,90</a>
+                    </div>
+                    
+                    <div class="pricing-card featured">
+                        <h3>Sistema Completo</h3>
+                        <div class="price">R$97</div>
+                        <p>Tudo do Método Essencial + ferramentas que tornam a aplicação imediata e duradoura.</p>
+                        
+                        <ul class="price-list">
+                            <li>E-book: Café com Teu Filho — 7 hábitos</li>
+                            <li>Planner Café com Teu Filho — rotina semanal</li>
+                            <li>Comunicação Calma — frases prontas</li>
+                            <li>Diário Anti-Crise — checklist imprimível</li>
+                            <li>Kit Meu Dia em Emojis — pictogramas</li>
+                            <li>Garantia de 30 dias</li>
+                        </ul>
+                        
+                        <div style="text-align: center; margin: 20px 0; padding: 15px; background: rgba(255, 107, 107, 0.1); border-radius: 10px;">
+                            <strong>Valor total: R$327</strong><br>
+                            <span style="color: #ff6b6b;">Preço de lançamento: R$97</span>
+                        </div>
+                        
+                        <a href="#" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 20px;">Comprar Sistema Completo — R$97</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Guarantee Section -->
+            <section class="content-section guarantee-section">
+                <h2>Garantia Total — Sem Risco</h2>
+                
+                <div class="guarantee-badge">
+                    <h3>🛡️ 30 dias de garantia incondicional</h3>
+                    <p>Se, em 30 dias, você não sentir diferença na rotina ou não estiver satisfeita por qualquer motivo, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+                </div>
+
+                <p style="margin-bottom: 30px;">Considere: o custo de continuar no mesmo ciclo é noites mal dormidas, desgaste emocional e perda de conexão. Por R$29,90 você pode começar a mudar isso hoje.</p>
+
+                <a href="#oferta" class="btn btn-primary">Quero começar agora — Sem risco</a>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="content-section">
+                <h2>Perguntas Frequentes</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Funciona para todos os graus de autismo?
+                    </div>
+                    <div class="faq-answer">
+                        O método é focado em práticas de rotina, comunicação e regulação — ferramentas aplicáveis para a maioria das crianças. Não prometemos "cura"; prometemos redução de crises e mais previsibilidade no dia a dia. Em casos de risco ou crises severas, consulte um especialista.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Se eu já tentei tudo, por que isso seria diferente?
+                    </div>
+                    <div class="faq-answer">
+                        Porque este sistema combina <strong>simples passos</strong> com <strong>ferramentas práticas</strong>. Não é teoria: são hábitos estruturados + recursos visuais que funcionam na prática, testados por mães em contextos reais.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Como recebo os PDFs?
+                    </div>
+                    <div class="faq-answer">
+                        Imediatamente após o pagamento você receberá links de download e acesso por e-mail. Pode imprimir ou usar no celular/tablet.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        E se não funcionar para meu filho?
+                    </div>
+                    <div class="faq-answer">
+                        30 dias de garantia incondicional. Se não houver resultado, devolvemos seu dinheiro. Sem perguntas.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>&copy; 2025 Café com Teu Filho — Todos os direitos reservados.</p>
+                <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">
+                    Transformando rotinas, criando conexões.
+                </p>
+            </footer>
+        </div>
     </div>
-  </header>
 
-  <!-- Main Content -->
-  <main class="max-w-6xl mx-auto px-4 md:px-8 py-12">
-    <!-- Section 1 -->
-    <section class="mb-20" data-aos="fade-up">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-purple-800 mb-6">Eu sei o que você já tentou...</h2>
-        <div class="max-w-3xl mx-auto">
-          <p class="text-lg mb-6">
-            Você já buscou terapias caras, convênios que não entregam, grupos que prometiam apoio e só trouxeram frustração. 
-          </p>
-          <p class="text-lg">
-            Eu sei que você já gastou dinheiro, tempo e esperança em soluções que falharam.
-          </p>
-        </div>
-      </div>
-      
-      <div class="bg-purple-50 rounded-2xl p-8 md:p-10 max-w-4xl mx-auto">
-        <div class="flex items-center">
-          <div class="hidden md:block mr-6">
-            <i data-feather="heart" class="w-12 h-12 text-purple-600"></i>
-          </div>
-          <p class="text-lg md:text-xl italic text-purple-800">
-            "O peso que você carrega não é apenas cuidar do seu filho, mas enfrentar o julgamento, os olhares de reprovação e a sobrecarga total de fazer tudo sozinha."
-          </p>
-        </div>
-      </div>
-    </section>
+    <script>
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
 
-    <!-- Section 2 -->
-    <section class="mb-20" data-aos="fade-up">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-purple-800 mb-6">Agora existe um Santuário</h2>
-        <div class="max-w-3xl mx-auto">
-          <p class="text-lg">
-            O <span class="font-bold text-purple-700">Café com teu Filho</span> não é mais um método vazio. É um refúgio para mães como você. 
-            Aqui a promessa não é "controlar comportamento", mas conquistar paz, inclusão e dias de menos crise e mais conexão.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Products Section -->
-    <section class="mb-20" data-aos="fade-up">
-      <h2 class="text-3xl font-bold text-purple-800 mb-12 text-center">O que você vai receber</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Product 1 -->
-        <div class="product-card bg-white" data-aos="zoom-in" data-aos-delay="100">
-          <img src="cafe_com_teu_filho_ebook.png" alt="Ebook Café com teu Filho" class="product-image">
-          <div class="p-6">
-            <div class="flex items-center mb-3">
-              <i data-feather="book" class="w-6 h-6 text-purple-600 mr-2"></i>
-              <h3 class="text-xl font-semibold text-purple-800">E-book Café com teu Filho</h3>
-            </div>
-            <p class="text-gray-600">
-              Os 7 hábitos que transformam o caos em conexão. Reduza crises e crie laços fortes mesmo nos dias mais difíceis.
-            </p>
-          </div>
-        </div>
-        
-        <!-- Product 2 -->
-        <div class="product-card bg-white" data-aos="zoom-in" data-aos-delay="200">
-          <img src="planner_semanal.png" alt="Planner semanal" class="product-image">
-          <div class="p-6">
-            <div class="flex items-center mb-3">
-              <i data-feather="calendar" class="w-6 h-6 text-purple-600 mr-2"></i>
-              <h3 class="text-xl font-semibold text-purple-800">O Mapa da Paz Semanal</h3>
-            </div>
-            <p class="text-gray-600">
-              A ferramenta visual que destrói a ansiedade da imprevisibilidade e dá ao seu filho a segurança de saber o que vai acontecer.
-            </p>
-          </div>
-        </div>
-        
-        <!-- Product 3 -->
-        <div class="product-card bg-white" data-aos="zoom-in" data-aos-delay="300">
-          <img src="checklist_anti_crise.png" alt="Checklist Anti-Crise" class="product-image">
-          <div class="p-6">
-            <div class="flex items-center mb-3">
-              <i data-feather="check-circle" class="w-6 h-6 text-purple-600 mr-2"></i>
-              <h3 class="text-xl font-semibold text-purple-800">O Protocolo de Emergência Anti-Crise</h3>
-            </div>
-            <p class="text-gray-600">
-              Seu guia de 60 segundos para agir quando o caos explode, transformando você na âncora de calma que seu filho precisa.
-            </p>
-          </div>
-        </div>
-        
-        <!-- Product 4 -->
-        <div class="product-card bg-white" data-aos="zoom-in" data-aos-delay="400">
-          <img src="comunicacao_calma.jpg" alt="Cartões de Comunicação Calma" class="product-image">
-          <div class="p-6">
-            <div class="flex items-center mb-3">
-              <i data-feather="message-square" class="w-6 h-6 text-purple-600 mr-2"></i>
-              <h3 class="text-xl font-semibold text-purple-800">O Arsenal da Comunicação Calma</h3>
-            </div>
-            <p class="text-gray-600">
-              As frases exatas para desarmar crises antes de começarem, fazendo seu filho se sentir ouvido e compreendido.
-            </p>
-          </div>
-        </div>
-        
-        <!-- Product 5 -->
-        <div class="product-card bg-white" data-aos="zoom-in" data-aos-delay="500">
-          <img src="kit_emojis.png" alt="Meu Dia em Emojis" class="product-image">
-          <div class="p-6">
-            <div class="flex items-center mb-3">
-              <i data-feather="smile" class="w-6 h-6 text-purple-600 mr-2"></i>
-              <h3 class="text-xl font-semibold text-purple-800">Meu Dia em Emojis</h3>
-            </div>
-            <p class="text-gray-600">
-              A rotina lúdica que transforma tarefas simples em um jogo visual, reduzindo resistência e aumentando a cooperação.
-            </p>
-          </div>
-        </div>
-        
-        <!-- Bonus Product -->
-        <div class="product-card bg-purple-50 border-2 border-purple-200" data-aos="zoom-in" data-aos-delay="600">
-          <div class="p-6">
-            <div class="flex items-center mb-3">
-              <i data-feather="gift" class="w-6 h-6 text-purple-600 mr-2"></i>
-              <h3 class="text-xl font-semibold text-purple-800">Vai Continuar na Crise?</h3>
-            </div>
-            <p class="text-gray-600 mb-4">
-              Você pode fechar esta página e seguir enfrentando sozinha as mesmas batalhas, ou pode hoje dar o primeiro passo para transformar sua casa em um lugar de paz e conexão.
-            </p>
-            <div class="bg-purple-100 text-purple-800 px-4 py-2 rounded-lg">
-              <i data-feather="clock" class="w-4 h-4 inline mr-1"></i>
-              <span class="text-sm font-medium">Última chance de sair da solidão</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="text-center my-20" data-aos="fade-up">
-      <div class="mb-10">
-        <a id="secondButton" href="https://pay.kirvano.com/dfc51481-b46e-4057-82fd-6141de2057a4" class="btn-primary text-white font-semibold py-4 px-8 rounded-full inline-block text-lg shadow-lg transform transition hover:scale-105">
-          Quero meu lugar no Santuário por R$97
-        </a>
-      </div>
-      
-      <div class="guarantee-box rounded-2xl p-6 md:p-8 max-w-4xl mx-auto" data-aos="zoom-in">
-        <div class="flex flex-col items-center">
-          <div class="bg-purple-100 p-3 rounded-full mb-4">
-            <i data-feather="shield" class="w-8 h-8 text-purple-600"></i>
-          </div>
-          <h3 class="text-2xl font-bold text-purple-800 mb-4">Nossa Garantia Incondicional de 30 Dias</h3>
-          <p class="text-lg font-semibold text-purple-700 mb-4">
-            Ou Você Conquista a Paz ou Nós Devolvemos Seu Dinheiro.
-          </p>
-          <div class="text-left space-y-4">
-            <p class="text-gray-700">
-              Eu coloco todo o risco sobre os meus ombros. Adquira o acesso ao Santuário hoje. 
-              Mergulhe no material, aplique as ferramentas por 30 dias completos.
-            </p>
-            <p class="text-gray-700">
-              Se ao final desse período você não sentir uma mudança real na atmosfera da sua casa — se as manhãs não estiverem mais calmas e a conexão com seu filho não estiver mais forte — 
-              basta me enviar um único e-mail. Eu devolverei 100% do seu investimento, sem perguntas, sem burocracia.
-            </p>
-            <p class="text-gray-700 font-medium">
-              O único risco é continuar na solidão e no caos de hoje.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-300 py-12 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <p class="mb-6">© 2025 Café com teu Filho. Todos os direitos reservados.</p>
-      <div class="flex justify-center space-x-6">
-        <a href="#" class="hover:text-white transition">Política de Privacidade</a>
-        <a href="#" class="hover:text-white transition">Termos de Uso</a>
-      </div>
-      <div class="mt-8 flex justify-center space-x-4">
-        <a href="#" class="text-gray-400 hover:text-white transition">
-          <i data-feather="facebook" class="w-5 h-5"></i>
-        </a>
-        <a href="#" class="text-gray-400 hover:text-white transition">
-          <i data-feather="instagram" class="w-5 h-5"></i>
-        </a>
-        <a href="#" class="text-gray-400 hover:text-white transition">
-          <i data-feather="youtube" class="w-5 h-5"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
-
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
         });
-    });
-  </script>
 
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.content-section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

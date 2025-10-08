@@ -2,19 +2,17 @@
 <html lang="pt-BR">
 <head>
   <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>">
-<!-- Google Ads -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17589209416"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17589209416"></script>
   <script>
-    window.dataLayer = window.dataLayer  [];
+    window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'AW-17589209416');
   </script>
 
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LBVE57XBWV"></script>
   <script>
-    window.dataLayer = window.dataLayer  [];
+    window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-LBVE57XBWV');
@@ -90,6 +88,15 @@
             margin-bottom: 40px;
             opacity: 0.95;
             font-weight: 400;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .price-anchor-hero {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 10px;
         }
 
         .cta-buttons {
@@ -97,7 +104,7 @@
             gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
-            margin-top: 40px;
+            margin-top: 20px;
         }
 
         .btn {
@@ -110,6 +117,7 @@
             display: inline-block;
             position: relative;
             overflow: hidden;
+            border: none;
         }
 
         .btn-primary {
@@ -121,17 +129,6 @@
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 12px 35px rgba(255, 107, 107, 0.6);
-        }
-
-        .btn-secondary {
-            background: white;
-            color: #667eea;
-            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
-        }
-
-        .btn-secondary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(255, 255, 255, 0.5);
         }
 
         /* Product Image */
@@ -169,96 +166,37 @@
             text-align: center;
         }
 
-        .content-section h3 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #4a5568;
-        }
-
         .content-section p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             margin-bottom: 20px;
             color: #4a5568;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        /* Problem Section */
-        .problem-section {
+        /* Sales Letter Section */
+        .sales-letter-section {
+             background: #fdfbfb;
+        }
+        
+        .sales-letter-section p {
+            text-align: center;
+        }
+
+        /* Marina's Story Section */
+        .story-section {
             background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
             color: #2d3748;
         }
-
-        .problem-highlight {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 30px;
-            border-radius: 15px;
-            margin: 20px 0;
-            border-left: 5px solid #e17055;
+        
+        .story-section p {
+             background: rgba(255, 255, 255, 0.9);
+             padding: 20px;
+             border-radius: 15px;
+             border-left: 5px solid #e17055;
         }
 
-        /* Solution Section */
-        .solution-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .benefit-card {
-            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(116, 185, 255, 0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .benefit-card h4 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        /* Testimonials */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .testimonial {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 15px;
-            border-left: 5px solid #00b894;
-            position: relative;
-        }
-
-        .testimonial::before {
-            content: '"';
-            font-size: 4rem;
-            color: #00b894;
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            font-family: serif;
-        }
-
-        .testimonial-author {
-            font-weight: 700;
-            color: #2d3748;
-            margin-bottom: 10px;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            color: #4a5568;
-        }
 
         /* Pricing Section */
         .pricing-section {
@@ -267,8 +205,10 @@
         }
 
         .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
             gap: 40px;
             margin-top: 40px;
         }
@@ -281,6 +221,9 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
             position: relative;
             transition: transform 0.3s ease;
+            width: 420px;
+            display: flex;
+            flex-direction: column;
         }
 
         .pricing-card:hover {
@@ -291,9 +234,9 @@
             border: 3px solid #ff6b6b;
             transform: scale(1.05);
         }
-
+        
         .pricing-card.featured::before {
-            content: 'MAIS POPULAR';
+            content: 'RECOMENDADO';
             position: absolute;
             top: -15px;
             left: 50%;
@@ -306,16 +249,37 @@
             font-weight: 700;
         }
 
+        .price-anchor {
+            text-align: center;
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 5px;
+        }
+
         .price {
             font-size: 3rem;
             font-weight: 800;
             color: #ff6b6b;
-            margin: 20px 0;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .pricing-card h3 {
+             font-size: 1.8rem;
+             text-align: center;
+             margin-bottom: 10px;
+        }
+        
+        .pricing-card p {
+             font-size: 1rem;
+             text-align: center;
+             flex-grow: 1;
         }
 
         .price-list {
             list-style: none;
             margin: 20px 0;
+            flex-grow: 1;
         }
 
         .price-list li {
@@ -323,6 +287,7 @@
             border-bottom: 1px solid #e2e8f0;
             position: relative;
             padding-left: 25px;
+            font-size: 1rem;
         }
 
         .price-list li::before {
@@ -332,34 +297,11 @@
             color: #00b894;
             font-weight: bold;
         }
-
-        /* FAQ Section */
-        .faq-item {
-            background: #f8f9fa;
-            margin: 20px 0;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .faq-question {
-            background: #e9ecef;
-            padding: 20px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .faq-question:hover {
-            background: #dee2e6;
-        }
-
-        .faq-answer {
-            padding: 20px;
-            display: none;
-        }
-
-        .faq-item.active .faq-answer {
-            display: block;
+        
+        .pricing-card .btn {
+            width: 100%;
+            text-align: center;
+            margin-top: auto;
         }
 
         /* Guarantee Section */
@@ -395,11 +337,6 @@
                 font-size: 1.1rem;
             }
 
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
             .content-section {
                 padding: 40px 20px;
             }
@@ -407,13 +344,9 @@
             .content-section h2 {
                 font-size: 2rem;
             }
-
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
-
+            
             .pricing-card.featured {
-                transform: none;
+                 transform: none;
             }
         }
 
@@ -433,7 +366,6 @@
             animation: fadeInUp 0.6s ease-out;
         }
 
-        /* Floating elements */
         .floating {
             animation: float 3s ease-in-out infinite;
         }
@@ -447,194 +379,87 @@
 <body>
     <div class="container">
         <div class="main-content">
-            <!-- Hero Section -->
             <section class="hero">
                 <div class="hero-content animate-fade-in">
-                    <h1>Café com Teu Filho</h1>
-                    <p class="subtitle"><strong>Reduza crises em até 70%</strong><br>
-                    7 hábitos práticos para transformar a rotina e criar calma — comece a ver diferença já na primeira semana.</p>
+                    <h1>Finalmente, a Paz na Sua Rotina.</h1>
+                    <p class="subtitle">O método testado por mães de crianças autistas para <strong>reduzir as crises em até 70%</strong> e transformar o caos em conexão, usando 7 hábitos que você aplica ainda esta semana.</p>
                     
                     <div class="product-image">
-                        <img src="capa.png" alt="Capa do produto" class="floating">
+                        <img src="capa.png" alt="Capa do produto Café com Teu Filho" class="floating">
                     </div>
-
+                    
+                    <div class="price-anchor-hero">De <s>R$147,00</s></div>
                     <div class="cta-buttons">
-                        <a href="#oferta" class="btn btn-primary">Quero o Método — R$29,90</a>
-                        <a href="#oferta" class="btn btn-secondary">Sistema Completo — R$97</a>
+                        <a href="#oferta" class="btn btn-primary">QUERO O MÉTODO por apenas R$29,90</a>
                     </div>
                 </div>
             </section>
 
-            <!-- Problem Section -->
-            <section class="content-section problem-section">
-                <h2>Você se reconhece aqui?</h2>
+            <section class="content-section sales-letter-section">
+                <h2>Isso soa familiar para você?</h2>
                 
-                <div class="problem-highlight">
-                    <p><strong>Vive em estado de alerta:</strong> pequenas tarefas viram batalhas, um evento inesperado desencadeia uma crise e você passa o dia inteiro apagando incêndios. O cansaço é físico e emocional. A culpa te corrói — você tem a sensação constante de que algo em você falhou como mãe.</p>
-                </div>
-
-                <div class="problem-highlight">
-                    <p><strong>Já tentou de tudo</strong> — terapias caras, conselhos bem-intencionados, rotinas complexas que não colaram. A frustração é a mesma: nada parece se adaptar à singularidade do seu filho.</p>
-                </div>
-
-                <div class="problem-highlight">
-                    <p><strong>Consequência:</strong> sem intervenção prática e rápida, os episódios de estresse se repetem, seu bem-estar colapsa e a relação com seu filho fica marcada por tensão em vez de afeto.</p>
-                </div>
+                <p>Você vive em estado de alerta constante. Uma simples troca de roupa vira uma batalha, uma ida ao mercado termina em crise, e você passa o dia inteiro apagando incêndios, sentindo o cansaço físico e emocional pesar uma tonelada.</p>
+                <p>E no meio disso tudo, a culpa te corrói. A sensação de que algo em você falhou como mãe, de que você não está fazendo o suficiente.</p>
+                <p>Você já tentou de tudo: terapias que custam uma fortuna, conselhos bem-intencionados de quem não vive a sua realidade, rotinas complexas que são impossíveis de seguir. E nada parece trazer a paz que você tanto sonha.</p>
+                <p><strong>Mas e se o segredo não fosse fazer MAIS, e sim fazer DIFERENTE?</strong></p>
+                <p>E se, em vez de focar apenas em "consertar" a crise do seu filho, você tivesse um mapa para construir um ambiente de calma e previsibilidade que <strong>impede a maioria das crises de acontecerem?</strong></p>
+                <p>Café com Teu Filho não é teoria. É um sistema prático e direto ao ponto, nascido na trincheira de uma mãe atípica, exatamente como você. É um e-book com 7 hábitos testados e ferramentas visuais que transformam a rotina de forma simples e sustentável.</p>
             </section>
 
-            <!-- Solution Section -->
-            <section class="content-section">
-                <h2>A solução: método objetivo + ferramentas práticas</h2>
-                
-                <p style="text-align: center; font-size: 1.2rem; margin-bottom: 40px;"><strong>Café com Teu Filho</strong> não é teoria. É um sistema prático: um e-book com 7 hábitos testados e orientações acionáveis que transformam a rotina — acompanhado por ferramentas que tornam a aplicação simples, visível e sustentável.</p>
-
-                <div class="solution-grid">
-                    <div class="benefit-card">
-                        <h4>🎯 Redução de Crises</h4>
-                        <p>Estratégias para diminuir episódios ainda nas primeiras semanas. Você sabe exatamente o que fazer todos os dias.</p>
-                    </div>
-                    
-                    <div class="benefit-card">
-                        <h4>📅 Previsibilidade</h4>
-                        <p>Rotinas claras que reduzem ansiedade e comportamentos explosivos. Menos decisões no calor do momento.</p>
-                    </div>
-                    
-                    <div class="benefit-card">
-                        <h4>💝 Mais Conexão</h4>
-                        <p>Rituais diários que devolvem momentos de afeto e presença. Desarma conflitos imediatamente.</p>
-                    </div>
-                    
-                    <div class="benefit-card">
-                        <h4>🛠️ Ferramentas Prontas</h4>
-                        <p>Checklists e pictogramas para aplicar com rapidez. Criança entende rotina sem dependência verbal.</p>
-                    </div>
-                </div>
+            <section class="content-section story-section">
+                <h2>Eu estive exatamente onde você está</h2>
+                <p>"Meu nome é Marina. Antes de criar este método, eu vivia no fundo do poço. A cada crise do meu filho, eu me sentia a pior mãe do mundo. A culpa era minha companheira constante.<br><br>Até o dia em que mudei a pergunta. Em vez de 'como eu conserto meu filho?', comecei a perguntar 'como eu construo um ambiente de paz para nós dois?'.<br><br>Foi aí que comecei a testar pequenos rituais, hábitos e ferramentas visuais. E, lentamente, a paz começou a vencer o caos. As crises diminuíram drasticamente, e a conexão que eu achava ter perdido, floresceu. O 'Café com Teu Filho' não é um manual de perfeição. É o mapa da minha jornada, organizado para guiar a sua."</p>
             </section>
-
-            <!-- Testimonials Section -->
-            <section class="content-section">
-                <h2>Resultados reais — mães que saíram do caos</h2>
-                
-                <div class="testimonials-grid">
-                    <div class="testimonial">
-                        <div class="testimonial-author">Mariana, 34 — Londrina</div>
-                        <div class="testimonial-text">Em 3 semanas minha casa mudou. Antes eu vivia no sufoco; hoje o pequeno já sabe quando vem a atividade e as crises quase sumiram. O Diário Anti-Crise salvou nossa noite.</div>
-                        <div style="margin-top: 10px; font-size: 0.9rem; color: #00b894; font-weight: 600;">— reduziu crises ~60% em 21 dias</div>
-                    </div>
-                    
-                    <div class="testimonial">
-                        <div class="testimonial-author">Ana, 40 — Salvador</div>
-                        <div class="testimonial-text">O Kit Emojis fez a diferença. Antes, explicações verbais não funcionavam. Depois de plastificar os cartões, a transição para a escola é outra história. Meu filho responde e eu fico menos ansiosa.</div>
-                        <div style="margin-top: 10px; font-size: 0.9rem; color: #00b894; font-weight: 600;">— prova de eficácia visual</div>
-                    </div>
-                    
-                    <div class="testimonial">
-                        <div class="testimonial-author">Rita, 29 — São Paulo</div>
-                        <div class="testimonial-text">Já tinha tentado terapias caras. O método me deu passos claros que posso aplicar agora — sem esperar meses. É prático e humano.</div>
-                        <div style="margin-top: 10px; font-size: 0.9rem; color: #00b894; font-weight: 600;">— prova de posicionamento 'prático vs caro'</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Pricing Section -->
+            
             <section class="content-section pricing-section" id="oferta">
-                <h2>Oferta — escolha como quer começar</h2>
+                <h2>Oferta – Escolha o seu ponto de partida</h2>
                 
                 <div class="pricing-grid">
                     <div class="pricing-card">
                         <h3>Método Essencial</h3>
+                        <div class="price-anchor">De <s>R$147,00</s></div>
                         <div class="price">R$29,90</div>
-                        <p>O ponto de entrada — entenda os 7 hábitos e comece a transformar a rotina.</p>
+                        <p>O ponto de partida ideal. Entenda os 7 hábitos que são a base de tudo e comece a transformar sua rotina hoje mesmo.</p>
                         
                         <ul class="price-list">
-                            <li>E-book: Café com Teu Filho — 7 hábitos</li>
+                            <li>E-book: Café com Teu Filho - 7 hábitos</li>
                             <li>Acesso imediato por download</li>
-                            <li>Garantia de 30 dias</li>
+                            <li>Garantia "Primeira Transformação" de 7 Dias</li>
                         </ul>
                         
-                        <a href="https://pay.kirvano.com/c285a735-b5c9-4a07-b4d1-14df8f266db1" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 20px;">Comprar Método — R$29,90</a>
+                        <a href="https://pay.kirvano.com/c285a735-b5c9-4a07-b4d1-14df8f266db1" class="btn btn-primary">Comprar Método — R$29,90</a>
                     </div>
                     
                     <div class="pricing-card featured">
                         <h3>Sistema Completo</h3>
+                        <div class="price-anchor">De <s>R$397,00</s></div>
                         <div class="price">R$97</div>
-                        <p>Tudo do Método Essencial + ferramentas que tornam a aplicação imediata e duradoura.</p>
+                        <p><strong>(Recomendado)</strong> O mapa completo para a transformação. O E-book com os 7 hábitos + todas as ferramentas práticas para aplicar e acelerar os resultados.</p>
                         
                         <ul class="price-list">
-                            <li>E-book: Café com Teu Filho — 7 hábitos</li>
-                            <li>Planner Café com Teu Filho — rotina semanal</li>
-                            <li>Comunicação Calma — frases prontas</li>
-                            <li>Diário Anti-Crise — checklist de bolso</li>
-                            <li>Kit Meu Dia em Emojis — pictogramas imprimíveis</li>
-                            <li>Garantia de 30 dias</li>
+                            <li><strong>TUDO do Método Essencial</strong></li>
+                            <li>Diário Anti-Crise (para os momentos de caos)</li>
+                            <li>Guia de Comunicação Calma (o fim das negociações)</li>
+                            <li>Planner de Rotinas Visuais</li>
+                            <li>Kit "Meu Dia Organizado" (com dezenas de pictogramas)</li>
                         </ul>
                         
-                        <div style="text-align: center; margin: 20px 0; padding: 15px; background: rgba(255, 107, 107, 0.1); border-radius: 10px;">
-                            <strong>Valor total: R$327</strong><br>
-                            <span style="color: #ff6b6b;">Preço de lançamento: R$97</span>
-                        </div>
-                        
-                        <a href="https://pay.kirvano.com/bd7e9c2e-1d53-4483-93ab-f41741e500f2" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 20px;">Comprar Sistema Completo — R$97</a>
+                        <a href="https://pay.kirvano.com/bd7e9c2e-1d53-4483-93ab-f41741e500f2" class="btn btn-primary">Comprar Sistema Completo — R$97</a>
                     </div>
                 </div>
             </section>
 
-            <!-- Guarantee Section -->
             <section class="content-section guarantee-section">
-                <h2>Garantia Total — Sem Risco</h2>
+                <h2>Garantia "Primeira Transformação" de 7 Dias</h2>
                 
                 <div class="guarantee-badge">
-                    <h3>🛡️ 30 dias de garantia incondicional</h3>
-                    <p>Se, em 30 dias, você não sentir diferença na rotina ou não estiver satisfeita por qualquer motivo, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+                    <h3>🛡️ O Risco é Todo Meu</h3>
+                    <p>Nossa promessa é que você começa a ver diferença já na primeira semana. Por isso, sua garantia é de 7 dias. Se, em uma semana, aplicando o método, você não sentir a primeira mudança na calma e na rotina da sua casa, ou não estiver satisfeita por qualquer motivo, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
                 </div>
-
-                <p style="margin-bottom: 30px;">Considere: o custo de continuar no mesmo ciclo é noites mal dormidas, desgaste emocional e perda de conexão. Por R$29,90 você pode começar a mudar isso hoje.</p>
 
                 <a href="#oferta" class="btn btn-primary">Quero começar agora — Sem risco</a>
             </section>
 
-            <!-- FAQ Section -->
-            <section class="content-section">
-                <h2>Perguntas Frequentes</h2>
-                
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        Funciona para todos os graus de autismo?
-                    </div>
-                    <div class="faq-answer">
-                        O método é focado em práticas de rotina, comunicação e regulação — ferramentas aplicáveis para a maioria das crianças. Não prometemos "cura"; prometemos redução de crises e mais previsibilidade no dia a dia. Em casos de risco ou crises severas, consulte um especialista.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        Se eu já tentei tudo, por que isso seria diferente?
-                    </div>
-                    <div class="faq-answer">
-                        Porque este sistema combina <strong>simples passos</strong> com <strong>ferramentas práticas</strong>. Não é teoria: são hábitos estruturados + recursos visuais que funcionam na prática, testados por mães em contextos reais.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        Como recebo os PDFs?
-                    </div>
-                    <div class="faq-answer">
-                        Imediatamente após o pagamento você receberá links de download e acesso por e-mail. Pode imprimir ou usar no celular/tablet.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        E se não funcionar para meu filho?
-                    </div>
-                    <div class="faq-answer">
-                        30 dias de garantia incondicional. Se não houver resultado, devolvemos seu dinheiro. Sem perguntas.
-                    </div>
-                </div>
-            </section>
-
-            <!-- Footer -->
             <footer class="footer">
                 <p>&copy; 2025 Café com Teu Filho — Todos os direitos reservados.</p>
                 <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">
@@ -645,21 +470,6 @@
     </div>
 
     <script>
-        function toggleFAQ(element) {
-            const faqItem = element.parentElement;
-            const isActive = faqItem.classList.contains('active');
-            
-            // Close all FAQ items
-            document.querySelectorAll('.faq-item').forEach(item => {
-                item.classList.remove('active');
-            });
-            
-            // Open clicked item if it wasn't active
-            if (!isActive) {
-                faqItem.classList.add('active');
-            }
-        }
-
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -672,24 +482,6 @@
                     });
                 }
             });
-        });
-
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fade-in');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.content-section').forEach(section => {
-            observer.observe(section);
         });
     </script>
 </body>
